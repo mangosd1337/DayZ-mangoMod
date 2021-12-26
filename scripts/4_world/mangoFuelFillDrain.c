@@ -39,3 +39,16 @@ modded class ActionEmptyBottleBaseCB
 		m_ActionData.m_ActionComponent = new CAContinuousEmpty(2000);
 	}
 };
+
+modded class ActionTransferLiquidCB : ActionContinuousBaseCB
+{
+	private const float TIME_TO_REPEAT = 0.25;
+	
+	override void CreateActionComponent()
+	{
+		if (TransferLiquidActionData.Cast(m_ActionData))
+			m_ActionData.m_ActionComponent = new CAContinuousQuantityLiquidTransfer(2000, TIME_TO_REPEAT, TransferLiquidActionData.Cast(m_ActionData).m_Tendency);
+		else
+			m_ActionData.m_ActionComponent = new CAContinuousQuantityLiquidTransfer(2000, TIME_TO_REPEAT);
+	}
+};
