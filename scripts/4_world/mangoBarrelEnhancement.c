@@ -3,7 +3,7 @@ modded class Barrel_ColorBase
     override void SetActions()
 	{
         super.SetActions();
-    
+
         AddAction(ActionWorldLiquidActionSwitch);
 	    AddAction(ActionFillFuel);
 	    AddAction(ActionFillCoolant);
@@ -17,5 +17,7 @@ modded class Barrel_ColorBase
 	    AddAction(ActionEmptyBottleBase);
 	    AddAction(ActionWashHandsItem);
 	    AddAction(ActionDrink);
+
+        AddAction(ActionMineTreeBark);
     }
 }
