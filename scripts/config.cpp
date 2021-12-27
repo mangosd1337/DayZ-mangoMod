@@ -69,6 +69,7 @@ class CfgVehicles
 		class Cargo
 		{
 			itemsCargoSize[]={10,40};
+			allowOwnedCargoManipulation=1;
 		};
 	}
 };
