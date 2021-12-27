@@ -59,17 +59,18 @@ class CfgVehicles
 		itemSize[]={1,2};
 		canBeDigged=1;
 
-		allowOwnedCargoManipulation=1;
+		//allowOwnedCargoManipulation=1;
 
-		inventorySlot[]=
-		{
-			"Back"
-		};
+		//inventorySlot[]=
+		//{
+		//	"Back"
+		//};
 
 		class Cargo
 		{
 			itemsCargoSize[]={10,40};
 			allowOwnedCargoManipulation=1;
+			openable=1;
 		};
 	}
 };

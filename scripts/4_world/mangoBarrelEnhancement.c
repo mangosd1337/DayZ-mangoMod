@@ -1,5 +1,21 @@
 modded class Barrel_ColorBase
 {
+	override bool CanPutInCargo( EntityAI parent )
+	{
+		if ( !IsOpen() )
+			return true;
+
+		return super.CanPutInCargo(parent);
+	}
+
+    override bool CanPutIntoHands( EntityAI parent )
+	{
+		if ( !IsOpen() )
+			return true;
+
+		return super.CanPutIntoHands(parent);
+	}
+
     override void SetActions()
 	{
         super.SetActions();
@@ -18,6 +34,6 @@ modded class Barrel_ColorBase
 	    AddAction(ActionWashHandsItem);
 	    AddAction(ActionDrink);
 
-        AddAction(ActionMineTreeBark);
+        //AddAction(ActionMineTreeBark);
     }
 }
